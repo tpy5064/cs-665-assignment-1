@@ -1,18 +1,28 @@
 package edu.bu.met.cs665.coffeeMachine;
 
-public abstract class Beverage {
-    public enum BeverageType {
-        ESPRESSO, AMERICANO, LATTE_MACCHIATO,
-        BLACK_TEA, GREEN_TEA, YELLOW_TEA
-    }
+public class Beverage {
 
     private int numMilk;
     private int numSugar;
-    private BeverageType type;
+    //Flexible way to implement beverage type, prevents duplicate code of multiple classes of beverages.
+    private String type;
 
-    public Beverage(BeverageType type, int numMilk, int numSugar) {
+    public Beverage(String type, int numMilk, int numSugar) {
         this.type = type;
         this.numMilk = numMilk;
         this.numSugar = numSugar;
+    }
+
+    //Getters to allow program to print the user's drink
+    public int getNumMilk() {
+        return numMilk;
+    }
+
+    public int getNumSugar() {
+        return numSugar;
+    }
+
+    public String getType() {
+        return type;
     }
 }

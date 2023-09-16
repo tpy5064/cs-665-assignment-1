@@ -8,7 +8,11 @@
 
 package edu.bu.met.cs665;
 
+import edu.bu.met.cs665.coffeeMachine.Beverage;
+import edu.bu.met.cs665.coffeeMachine.CoffeeMachine;
 import edu.bu.met.cs665.example1.Person;
+
+import java.util.ArrayList;
 
 /**
  * This is the Main class.
@@ -22,7 +26,20 @@ public class Main {
    * However, please note that every assignment/final projects requires JUnit tests.
    */
   public static void main(String[] args) {
-    System.out.println("This is a test message from the Main class (Main.java file)");
+    CoffeeMachine coffeeMachine = new CoffeeMachine();
+    ArrayList<Beverage> beverages = new ArrayList<>();
+
+    beverages.add(coffeeMachine.serveBeverage("Espresso", 0, 1));
+    beverages.add(coffeeMachine.serveBeverage("Americano", 1, 2));
+    beverages.add(coffeeMachine.serveBeverage("Green Tea", 0, 0));
+
+    for(Beverage b : beverages) {
+      if(b != null) {
+        System.out.println("Made " + b.getType() + " with " + b.getNumMilk() + " units of milk and " +
+                b.getNumSugar() + " units of sugar.");
+      }
+    }
+
   }
 
   /**
