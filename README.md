@@ -2,7 +2,7 @@
 | CS-665       | Software Design & Patterns |
 |--------------|----------------------------|
 | Name         | Tianqi Yang                |
-| Date         | 09/18/2000                 |
+| Date         | 09/19/2000                 |
 | Course       | Fall                       |
 | Assignment # | 1                          |
 
@@ -10,7 +10,7 @@
 Please add a paragraph or two overviewing the objectives of the assignment.
 
 # GitHub Repository Link:
-https://github.com/{YOUR_USERNAME}/cs-665-assignment-{ASSIGNMENT_NUMBER}
+https://github.com/tpy5064/cs-665-assignment-1
 
 # Implementation Description 
 
