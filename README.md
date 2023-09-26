@@ -19,6 +19,10 @@ https://github.com/tpy5064/cs-665-assignment-1
 info() method where the name of the beverage is modified.
 - Class structure is relatively simple and the string representation of the beverage objects are all done through
 info() method, and inherits milk and sugar count through the superclass.
+- CoffeeMachine class handles logic of which drink to produce via switch case statement, and handles the quantity of
+condiments requested. If the values are negative or exceeds 3, null value is returned. If drink type is illegal, null
+is returned.
+- Main class prints drinks served on the condition that the beverage is not null, preventing NullPointerException.
 
 
 # Maven Commands
