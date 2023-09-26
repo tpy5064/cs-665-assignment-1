@@ -19,9 +19,9 @@ public class TestCoffeeMachine {
     public void testBeverageValid() {
         beverage = coffeeMachine.serveBeverage("Espresso", 0, 2);
         assertNotNull(beverage);
-        assertEquals("Espresso", beverage.getType());
         assertEquals(0, beverage.getNumMilk());
         assertEquals(2, beverage.getNumSugar());
+        System.out.println(beverage.info());
         System.out.println("Test Case Passed");
     }
 
@@ -53,6 +53,14 @@ public class TestCoffeeMachine {
     //Test an invalid case, too much sugar
     public void testBeverageNegativeSugar() {
         beverage = coffeeMachine.serveBeverage("Americano", 1, -4);
+        assertNull(beverage);
+        System.out.println("Test Case Passed");
+    }
+
+    @Test
+    //Test invalid drink
+    public void testIllegalBeverage() {
+        beverage = coffeeMachine.serveBeverage("Pepsi", 0, 0);
         assertNull(beverage);
         System.out.println("Test Case Passed");
     }

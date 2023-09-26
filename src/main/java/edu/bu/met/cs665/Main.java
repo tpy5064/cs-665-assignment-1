@@ -11,7 +11,6 @@ package edu.bu.met.cs665;
 import edu.bu.met.cs665.coffeeMachine.Beverage;
 import edu.bu.met.cs665.coffeeMachine.CoffeeMachine;
 import edu.bu.met.cs665.example1.Person;
-
 import java.util.ArrayList;
 
 /**
@@ -27,18 +26,20 @@ public class Main {
    */
   public static void main(String[] args) {
     CoffeeMachine coffeeMachine = new CoffeeMachine();
+
+    //List of beverages to make
     ArrayList<Beverage> beverages = new ArrayList<>();
 
-    beverages.add(coffeeMachine.serveBeverage("Espresso", 0, 1));
-    beverages.add(coffeeMachine.serveBeverage("Americano", 1, 2));
-    beverages.add(coffeeMachine.serveBeverage("Green Tea", 0, 0));
+    beverages.add(coffeeMachine.serveBeverage("Espresso", 0, 0));
+    beverages.add(coffeeMachine.serveBeverage("Black Tea", 1, 1));
+    beverages.add(coffeeMachine.serveBeverage("Latte Macchiato", 3, 3));
 
-    for(Beverage b : beverages) {
-      if(b != null) {
-        System.out.println("Made " + b.getType() + " with " + b.getNumMilk() + " units of milk and " +
-                b.getNumSugar() + " units of sugar.");
-      }
+    for (Beverage b : beverages) {
+      System.out.println(b.info());
     }
+
+
+
 
   }
 

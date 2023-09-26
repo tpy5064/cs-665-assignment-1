@@ -2,28 +2,23 @@
 | CS-665       | Software Design & Patterns |
 |--------------|----------------------------|
 | Name         | Tianqi Yang                |
-| Date         | 09/19/2000                 |
+| Date         | 09/26/2000                 |
 | Course       | Fall                       |
 | Assignment # | 1                          |
 
 # Assignment Overview
-Please add a paragraph or two overviewing the objectives of the assignment.
+A coffee machine that can serve beverages flexibly with condiments (milk and sugar). The condiments cannot exceed 3
+units in both sugar and milk.
 
 # GitHub Repository Link:
 https://github.com/tpy5064/cs-665-assignment-1
 
 # Implementation Description 
-
-
-For each assignment, please answer the following:
-
-- Explain the level of flexibility in your implementation, including how new object types can
-be easily added or removed in the future.
-- Discuss the simplicity and understandability of your implementation, ensuring that it is
-easy for others to read and maintain.
-- Describe how you have avoided duplicated code and why it is important.
-- If applicable, mention any design patterns you have used and explain why they were
-chosen.
+- Used abstract Beverage type so that new drinks can directly extend this class to prevent repeated code
+- New drinks can be added to the beverages package and call the super() class, only modification needed is to the 
+info() method where the name of the beverage is modified.
+- Class structure is relatively simple and the string representation of the beverage objects are all done through
+info() method, and inherits milk and sugar count through the superclass.
 
 
 # Maven Commands
