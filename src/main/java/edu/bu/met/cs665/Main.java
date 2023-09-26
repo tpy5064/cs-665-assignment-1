@@ -32,7 +32,7 @@ public class Main {
 
     beverages.add(coffeeMachine.serveBeverage("Espresso", 0, 0));
     beverages.add(coffeeMachine.serveBeverage("Black Tea", 1, 1));
-    beverages.add(coffeeMachine.serveBeverage("Latte Macchiato", 4, 3));
+    beverages.add(coffeeMachine.serveBeverage("Latte Macchiato", 3, 3));
 
     for (Beverage b : beverages) {
       if (b != null) {
